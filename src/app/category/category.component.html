@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-4" *ngFor="let list of listOfProducts">
+      <div class="card" style="width: 100%" (click)="getProductIfo(list.productId)" [routerLink] = "['/product',list.productId]">
+          <img class="card-img-top" src="{{list.product_image_url}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{list.productId}}</h5>
+            <p class="card-text collapse" id="collapseExample">{{list.product_description}}</p>
+            <a href="#" class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button">Go somewhere</a>
+          </div>
+        </div>
+  </div>
+</div>
+
